@@ -1,4 +1,4 @@
-kconst express = require('express');
+const express = require('express');
 //to initialize bodypARSER
 const bodyParser = require('body-parser');
 // initialize our express app
