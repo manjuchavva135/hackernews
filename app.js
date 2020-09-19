@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/hackernewsapp', {useNewUrlParser: tr
     console.log("connected")
 });
 const news = require('./routes/news');
-let port = 3000;
+let port = PROCESS.ENV||3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/news', news);
