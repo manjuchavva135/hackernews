@@ -1,4 +1,4 @@
-const express = require('express');
+kconst express = require('express');
 //to initialize bodypARSER
 const bodyParser = require('body-parser');
 // initialize our express app
@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/hackernewsapp', {useNewUrlParser: tr
     console.log("connected")
 });
 const news = require('./routes/news');
-let port = PROCESS.ENV||3000;
+let port = process.env.PORT ||3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/news', news);
